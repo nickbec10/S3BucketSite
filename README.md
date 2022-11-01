@@ -35,3 +35,13 @@ To delete the stack and start fresh
 ```
 $ aws cloudformation delete-stack --stack-name SubatomictheoryStack
 ```
+
+To sync S3 folder
+```
+aws s3 sync --acl public-read \
+    --exclude '*' \
+    --include '*.html' \
+    --include '*.png' \
+    --include '*.css' \
+    "/Users/nbecker/Documents/Study Materials/AWS/S3BucketSite/" s3://subatomictheory.com
+```
