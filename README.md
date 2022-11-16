@@ -12,7 +12,7 @@ Note that because S3 buckets have a global namespace it is not possible to have 
 Because of this it is useful to name a bucket with a suffix of the region that the bucket was created in.
 Doing that allows you to have uniquely named buckets that differ in name by only the region making the functions accessing the contents easier to write and manage.
  -->
-This is an example of using CloudFormation to create bucket to store objects in, a bucket to for the domain and a bucket for logging. It will aslo create the DNS records for the website and set up logging.
+This is an example of using CloudFormation to create bucket to store objects in, a bucket to for the domain and a bucket for logging. It will aslo create the DNS records in Route53 for the website and set up logging.
 
 S3StaticWebsiteCustomDomain.yml contains all the code to create the CloudFormation stacks. The sections are listed below. 
  * Parameters - defines root domain
